@@ -19,9 +19,9 @@ CT scans contain 2D arrays with *pixel intensities* in DICOM files. However CT s
 
 > **HU** measure the radio-intensity of particular  mediums based on their attenuation coefficients. *Attenuation coefficients* give a measure of how easily X-rays can pass through a particular medium.
 
-They range from *-1000 HU for air, to 0 HU for distilled water*. In our case *Lung CT scans* have the following range:
+They range from *-1000 HU for air, to 0 HU for distilled water*. In our case *Lung CT scans*, we have the following range:
 
 * Max HU: 400
 * Min HU: -1000
 
-Once we clamp our input to **a particular intensity window range** as a preprocessing step, we can *normalize the resulting data to **0–255** * and produce an image which can be used to train machine learning models.
+Once we clamp our input to **a particular intensity window range** as a preprocessing step, we can *normalize the resulting data to 0–255* and produce an image which can be used to train machine learning models.
