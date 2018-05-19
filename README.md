@@ -1,6 +1,5 @@
-<p align="center">
-CNN for detecting Lung Nodules from CT scans
-</p>
+# CNN for detecting Lung Nodules from CT scans
+
 
 ### Content
 
