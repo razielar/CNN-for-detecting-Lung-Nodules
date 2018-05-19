@@ -1,4 +1,4 @@
-# Convolutional Neural Network for detecting Lung Nodules
+# CNN for detecting Lung Nodules from CT scans
 
 ### Content
 
