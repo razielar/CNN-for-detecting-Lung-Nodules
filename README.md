@@ -3,6 +3,10 @@
 ### Content
 
 1. [Prerequisites](#Prerequisites)
+2. [Introduction](#Introduction)
+3. [Data from CT scans](#Data)
+4. [LUNA16 dataset](#LUNA16)
+5. [References](#References)
 
 ### <a id='Prerequisites'></a> Prerequisites:
 
@@ -11,13 +15,13 @@
 * Install [SimpleITK](http://www.simpleitk.org/)
 * Install [PIL](http://pythonware.com/products/pil/) (Python Imaging Library)
 
-## Introduction
+## <a id='Introduction'></a> Introduction
 
 A **computerized tomography (CT)** scan consists of a series of X-ray images taken from different angles and combines them to create *cross-sectional images*, or slices, of the bones, soft tissues, etc. inside our body.
 
 Since CT scans consist of *slices* which amalgamate a **3D view**, this technology allows radiologists to analyze the body in high-resolution 3D representations.
 
-## Data from CT scans
+## <a id='Data'></a> Data from CT scans
 
 CT scans contain 2D arrays with *pixel intensities* in DICOM files. However CT scans are not in the standard *0–255 range*, but are instead in **HU (Hounsfield Units)**
 
@@ -30,11 +34,11 @@ They range from *-1000 HU for air, to 0 HU for distilled water*. In our case *Lu
 
 Once we clamp our input to a **particular intensity window range** as a preprocessing step, we can *normalize the resulting data to 0–255* and produce an image which can be used to train machine learning models.
 
-## Dataset
+## <a id='LUNA16'></a> LUNA16 dataset
 
 
 
-### References:
+### <a id='References'></a> References:
 
 1. [Stanford AI for Healthcare](https://medium.com/stanford-ai-for-healthcare/superman-isnt-the-only-one-with-x-ray-vision-deep-learning-for-ct-scans-290aaa7ba5c1)
 
