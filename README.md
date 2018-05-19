@@ -1,5 +1,9 @@
 # Convolutional Neural Network for detecting Lung Nodules
 
+### Content
+
+1. Prerequisites
+
 ### Prerequisites:
 
 * Install [Tensorflow](https://www.tensorflow.org/install/)
@@ -24,4 +28,18 @@ They range from *-1000 HU for air, to 0 HU for distilled water*. In our case *Lu
 * Max HU: 400
 * Min HU: -1000
 
-Once we clamp our input to **a particular intensity window range** as a preprocessing step, we can *normalize the resulting data to 0–255* and produce an image which can be used to train machine learning models.
+Once we clamp our input to a **particular intensity window range** as a preprocessing step, we can *normalize the resulting data to 0–255* and produce an image which can be used to train machine learning models.
+
+## Dataset
+
+
+
+### References:
+
+1. [Stanford AI for Healthcare](https://medium.com/stanford-ai-for-healthcare/superman-isnt-the-only-one-with-x-ray-vision-deep-learning-for-ct-scans-290aaa7ba5c1)
+
+2. [Example of the 3 Convolutional layer](https://github.com/swethasubramanian/LungCancerDetection)
+
+3. [Dataset: LUNA16](https://luna16.grand-challenge.org/home/)
+
+4. [Tutorial to manage to open, visualize, transform cartesian coordinates to voxel coordinates](https://luna16.grand-challenge.org/tutorial/)
