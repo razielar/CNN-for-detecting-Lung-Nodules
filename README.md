@@ -1,4 +1,4 @@
-# CNN for detecting Lung Nodules from CT scans
+<center> <h2> CNN for detecting Lung Nodules from CT scans </h2> </center>
 
 ### Content
 
