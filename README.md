@@ -2,9 +2,9 @@
 
 ### Content
 
-1. Prerequisites
+1. [Prerequisites](#Prerequisites)
 
-### Prerequisites:
+### <a id='Prerequisites'></a> Prerequisites:
 
 * Install [Tensorflow](https://www.tensorflow.org/install/)
 * Install [Tflearn](http://tflearn.org/)
