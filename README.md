@@ -6,7 +6,7 @@
 1. [Prerequisites](#Prerequisites)
 2. [Introduction](#Introduction)
 3. [Data from CT scans](#Data)
-4. [LUNA16 dataset](#LUNA16)
+4. [Preprocessing](#LUNA16)
 5. [References](#References)
 
 ### <a id='Prerequisites'></a> Prerequisites:
@@ -39,8 +39,10 @@ They range from *-1000 HU for air, to 0 HU for distilled water*. In our case *Lu
 
 Once we clamp our input to a **particular intensity window range** as a preprocessing step, we can *normalize the resulting data to 0–255* and produce an image which can be used to train machine learning models.
 
-## <a id='LUNA16'></a> LUNA16 dataset
+## <a id='LUNA16'></a> Preprocessing
 
+
+We are going to use the LUNA16 dataset which contains 888 CT scans. The images have a .mhd format and .raw files. We are going to use *SimpleITK* library to read the .mhd files. Each CT scan has dimensions of **512x512xn**, where n is the number of axial scans. There are about **200 images** in **each CT scan**.
 
 
 ### <a id='References'></a> References:
