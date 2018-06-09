@@ -7,7 +7,8 @@
 2. [Introduction](#Introduction)
 3. [Data from CT scans](#Data)
 4. [Preprocessing](#LUNA16)
-5. [References](#References)
+5. [Building a Convolutional Neural Network](#CNN)
+6. [References](#References)
 
 ### <a id='Prerequisites'></a> Prerequisites:
 
@@ -46,8 +47,14 @@ We are going to use the [LUNA16](https://luna16.grand-challenge.org/home/) datas
 
 There are a total of **551065 annotations**. Of all the annotations provided, **1351** were labeled as **nodules**, rest were labeled negative (**549714**). So there *big class imbalance*.
 
-We could potentially *train the CNN on all the pixels*, but that would *increase the computational cost and training time*. So instead I just decided to **crop the images around the coordinates provided** in the annotations. The annotation were provided in **Cartesian coordinates**. So they had to be **converted to voxel coordinates**. Also the **image intensity** was defined in **HU scale**. So it had to be rescaled for image processing purposes.
+We could potentially *train the CNN on all the pixels*, but that would *increase the computational cost and training time*. So instead I just decided to **crop the images around** the **coordinates provided** in the annotations. The annotation were provided in **Cartesian coordinates**. So they had to be **converted to voxel coordinates**. Also the **image intensity** was defined in **HU scale**. So it had to be rescaled for image processing purposes.
 
+The script would generate **50 x 50 grayscale images** for training, testing and validating a CNN.
+
+## <a id='CNN'></a> Building a Convolutional Neural Network
+
+
+For building a CNN [Tflearn](http://tflearn.org/) will be used. Tflearn is a high-level API wrapper around tensorflow. Using a 3 convolutional layers in the architecture.
 
 ### <a id='References'></a> References:
 
