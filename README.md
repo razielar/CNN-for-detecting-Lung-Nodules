@@ -42,7 +42,11 @@ Once we clamp our input to a **particular intensity window range** as a preproce
 ## <a id='LUNA16'></a> Preprocessing
 
 
-We are going to use the LUNA16 dataset which contains 888 CT scans. The images have a .mhd format and .raw files. We are going to use *SimpleITK* library to read the .mhd files. Each CT scan has dimensions of **512x512xn**, where n is the number of axial scans. There are about **200 images** in **each CT scan**.
+We are going to use the [LUNA16](https://luna16.grand-challenge.org/home/) dataset which contains *888 CT scans*. The images have a *.mhd format* and *.raw files*. The [SimpleITK](http://www.simpleitk.org/) library can be used to read the .mhd files. Each CT scan has dimensions of **512x512xn**, where **n** is the number of axial scans. There are about **200 images** in **each CT scan**.
+
+There are a total of **551065 annotations**. Of all the annotations provided, **1351** were labeled as **nodules**, rest were labeled negative (**549714**). So there *big class imbalance*.
+
+We could potentially *train the CNN on all the pixels*, but that would *increase the computational cost and training time*. So instead I just decided to **crop the images around the coordinates provided** in the annotations. The annotation were provided in **Cartesian coordinates**. So they had to be **converted to voxel coordinates**. Also the **image intensity** was defined in **HU scale**. So it had to be rescaled for image processing purposes.
 
 
 ### <a id='References'></a> References:
